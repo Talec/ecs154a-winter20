@@ -32,13 +32,13 @@ Class
 Lecture
 ~~~~~~~
 
-*Monday, Wednesday, Friday*: 17:10 - 18:00, 176 Everson
+*Monday, Wednesday, Friday*: 17:10 - 18:00, 100 Hunt
 
 Discussions
 ~~~~~~~~~~~
 
 * *A01*: Tuesday, 08:00 - 08:50, 1132 Bainer
-* *A02*: Tuesday, 12:10 - 13:00, 261 Olson
+* *A02*: Tuesday, 12:10 - 13:00, 130 Physics
 * *A03*: Friday, 14:10 - 15:00, 1132 Bainer
 * *A04*: Wednesday, 14:10 - 15:00, 147 Olson
 
@@ -73,7 +73,7 @@ Unsolicited emails about the course will be ignored.
 Office Hours
 """"""""""""
 
-*Monday, Thursday*: 14:40 - 16:00, 71 Kemper (CSIF)
+*Monday, Thursday*: 15:10 - 16:00, 71 Kemper (CSIF)
 
 There will be no office hours on the first day of class, 2020-01-06.
 Changes to other office hours will be announced on Campuswire_.
@@ -115,7 +115,7 @@ Minqiang Hu
 Oleg Igouchkine
 """""""""""""""
 
-**Office Hours**: *Tuesday*, 09:00 - 10:00, 11:00 - 12:00, 53 Kemper
+**Office Hours**: *Tuesday*, 09:00 - 11:00, 53 Kemper
 
 Websites
 --------

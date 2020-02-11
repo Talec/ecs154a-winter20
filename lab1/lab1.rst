@@ -17,7 +17,7 @@ Submission
 
 Due by 20:00 on Monday, 2020-01-20.
 
-Turn in for the Logisim portion is on Gradescope.
+Turn in for the Logisim Evolution portion is on Gradescope.
 Submit the specified .circ files for each problem.
 The person submitting should specify their partner's name (if necessary) during the submission process.
 
@@ -30,7 +30,8 @@ Logisim Evolution
 
 We will be using v2.15.0 of `Logisim Evolution`_ for the majority of the quarter.
 You can download it here_.
-Earlier versions may look different; make sure to use the link above to download it.
+**You must use v2.15.0 for the autograder to run correctly!**
+Save yourself some frustration and download it from the link above; don't download it anywhere else.
 
 Logisim Evolution is distributed via a JAR file.
 JAR files need a Java Runtime Environment (JRE) available to run.
@@ -45,8 +46,8 @@ Here's recommendations for a JRE for the major operating systems:
 
   * One TA has reported that you'll need to adjust your security settings in your options to run the JAR file.
 
-Matthew Farrens has a Logisim introduction available on `his website`_; read sections 2 and 3.
-Note that this was written for the original Logisim, so some things might look a bit different, but the basics should be the same.
+Matthew Farrens has an introduction written for the original Logisim available on `his website`_; read sections 2 and 3.
+Note that since this was written for the original Logisim, some things might look a bit different, but the basics should be the same.
 Discussions in the first week will also give a short introduction to Logisim Evolution and how to implement functions.
 I'd recommend that you download it and test it out before your first discussion so that you can follow along on the tutorial.
 
@@ -65,10 +66,17 @@ You have unlimited submissions; test as many times as you like.
 The autograder expects specific file names for each part, as well as main circuit names.
 In addition, the autograder expects specific input/output pin names and that the pins are in certain places.
 We will provide you with base circuits for each problem (see the *base/* subfolder) that are set up correctly.
+**Don't do any of the following things:**
 
-**Do not modify the file name, circuit name, pin names, or move the pins inside Logisim!**
-If you do, your circuit will fail to run, error out, or give the wrong results.
-Either way, you'll get a 0.
+* modify the file name
+* modify the base circuit name
+* modify the names of the pins already there
+* move any of the pins already there
+* delete any of the pins already there
+* add extra pins
+
+If you do, your circuit might fail to run, error out, or give the wrong results.
+If it does, you'll get a 0.
 
 Debugging
 ~~~~~~~~~
@@ -84,27 +92,21 @@ You can read more about the Test Vector feature and how to use it in the Logisim
 
 If the test vector fails, then your circuit will fail the autograder as well.
 That said, *it's possible to pass every test case in the vector but fail the autograder!*
-If this ends up happening to you, the most likely culprits are:
-
-* you changed the file name of your circuit
-* you changed the name of the circuit
-* you moved the pins
-
-Doing any of these causes your submission to interact differently with the autograder.
-**Again, do not modify the file name, circuit name, pin names, or move the pins inside Logisim!**
+If this ends up happening to you, the most likely culprits are anything listed above in the Grading_ section.
+Doing any of these causes your submission to interact differently with the autograder's grading mechanism.
 
 Constraints
 ~~~~~~~~~~~
 
-For these problems, you must use designs relying on only basic gates (NOT, AND, OR, NAND, NOR, XOR, XNOR) and the Logisim wiring library, unless specified otherwise.
+For these problems, you must use designs relying on only basic gates (NOT, AND, OR, NAND, NOR, XOR, XNOR) and the Logisim Evolution wiring library, unless specified otherwise.
 Violating specified constraints will result in a 0 on the problem in question.
 While the autograder may give you credit even if you violate a constraint, we will check submissions after the due date and update grades appropriately.
 
-Logisim Problems [95]
----------------------
+Logisim Evolution Problems [95]
+-------------------------------
 
-1. Quick introduction to Logisim [10]
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Quick introduction to Logisim Evolution [10]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Submission file for this part: *1.circ*
 * Main circuit name: *introduction*
@@ -131,7 +133,7 @@ Instead of hooking up the inputs directly to the gates, you can hook up duplicat
 
 Once you're finished with a circuit and want to test it manually, you can use the hand tool and click on the input pins to change their values, which will propagate to the rest of the circuit.
 You can reset the simulation back to the start with Ctrl-R to test again after you make changes.
-You can also use the Test Vector feature to automatically test your circuit; see the Testing_ section above.
+You can also use the Test Vector feature to automatically test your circuit; see the Debugging_ section above.
 
 2. Minterm [10]
 ~~~~~~~~~~~~~~~
@@ -172,6 +174,9 @@ Derive and implement a minimum sum-of-products expression for the following func
 
 m stands for minterm.
 
+Note your SOP expression must be minimal and utilize don't cares, if any.
+If it is not, and you brute-force the problem, you will lose points.
+
 5. Single-digit seven-segment display [35]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -205,7 +210,10 @@ The 3rd and most significant bit of the input *i* corresponds to **i3** on the t
 Similarly, the 0th and least significant bit of the input *i* corresponds to **i0** on the table.
 We will use this naming system throughout the class.
 
-Testing this problem is best done manually by attaching the relevant inputs to the *7-Segment Display* module from the Input/Output library of Logisim.
+Note your SOP expression must be minimal and utilize don't cares, if any.
+If it is not, and you brute-force the problem, you will lose points.
+
+Testing this problem is best done manually by attaching the relevant inputs to the *7-Segment Display* module from the Input/Output library of Logisim Evolution.
 Feel free to leave it inside your circuit if you want before submission; it won't affect the testing.
 
 6. 4-to-1 multiplexor [20]
@@ -221,6 +229,21 @@ The *selector* input chooses between which of the four *input* pins to output to
 Hint: the lecture notes show how to make a 4-to-1 multiplexor with one data bit, but you'll need to figure out what to modify to support more data bits.
 
 You may not use MUXes for this problem as it defeats the purpose of the problem.
+
+Survey [5]
+----------
+
+For every lab, there will be an associated post-lab survey worth 5% of the grade.
+Surveys are graded on completion; your answers do not affect your grade.
+This survey is going to ask you about how you felt about the assignment and how much time you spent on it.
+Everybody needs to submit a survey response individually.
+
+There's no late penalty on the survey portion.
+As long as you submit by the late submission deadline, you'll get full credit.
+
+You can find the `survey for this lab`_ on Canvas.
+
+.. _`survey for this lab`: https://canvas.ucdavis.edu/courses/424855/quizzes/54371
 
 Extra credit: Triple-digit display [15]
 ---------------------------------------
@@ -244,19 +267,6 @@ The image below shows an example of how the circuit works for an input value of 
     :width: 50%
     :align: center
 
-You may use anything in the Logisim Arithmetic library for this problem.
-Testing this problem is best done manually by attaching relevant inputs to *7-Segment Display* modules from the Input/Output library of Logisim.
+You may use anything in the Logisim Evolution Arithmetic library for this problem.
+Testing this problem is best done manually by attaching relevant inputs to *7-Segment Display* modules from the Input/Output library of Logisim Evolution.
 Feel free to leave them inside your circuit if you want before submission; they won't affect the testing.
-
-Survey [5]
-----------
-
-For every lab, there will be an associated survey worth 5% of the grade.
-This survey is going to ask you about how you felt about the assignment and how much time you spent on it.
-Everybody needs to submit a survey response individually.
-
-You can find the survey on Canvas_.
-There's no late penalty on the survey portion.
-As long as you submit by the late submission deadline, you'll get full credit.
-
-.. _Canvas: https://canvas.ucdavis.edu
